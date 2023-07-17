@@ -150,9 +150,8 @@ jobs:
           key: ${{ inputs.os }}-${{ inputs.cpu }}-${{ env.cache_nonce }}
 
       - name: Setup Nimble
-        uses: yyoncho/nimble@master
+        uses: yyoncho/nimble/.github/actions/install_nimble@master
         with:
-          name: install_nimble
           os: ${{ matrix.target.os }}
           cpu: ${{ matrix.target.cpu }}
 
